@@ -80,4 +80,8 @@ dependencies {
     //Coil
     implementation("io.coil-kt:coil-compose:2.3.0")
 
+    //view-model
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+
 }
