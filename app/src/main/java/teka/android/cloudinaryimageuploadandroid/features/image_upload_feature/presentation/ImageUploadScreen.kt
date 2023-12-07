@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -32,11 +33,13 @@ import teka.android.cloudinaryimageuploadandroid.utils.getRealPathFromURI
 @Composable
 fun ImageUploadScreen() {
     val imageUploadViewModel: ImageUploadViewModel = viewModel()
+    val defaultImage = Uri.parse("android.resource://teka.android.cloudinaryimageuploadandroid/drawable/${R.drawable.pick_image}")
+    val imageUri by remember { mutableStateOf(R.drawable.pick_image) }
 
 
     val context = LocalContext.current
-    var imageUri: Any? by remember { mutableStateOf(R.drawable.pick_image) }
-    var imageFilePath: String? = getRealPathFromURI(imageUri, context)
+//    val imageUri: Uri by remember { mutableStateOf(imagePainter) }
+//    val imageFilePath: String? = getRealPathFromURI(imageUri, context)
     var selectedImageUris by remember {
         mutableStateOf<List<Uri>>(emptyList())
     }
@@ -47,7 +50,8 @@ fun ImageUploadScreen() {
     ) {
         if (it != null) {
             Log.d("PhotoPicker", "Selected URI: $it")
-            imageUri = it
+//            Log.d("PhotoPicker", "Selected FilePath: ${getRealPathFromURI(imageUri, context)}")
+//            imageUri = it
         } else {
             Log.d("PhotoPicker", "No media selected")
         }
@@ -122,9 +126,9 @@ fun ImageUploadScreen() {
         ){
             Button(
                 onClick = {
-                    if (imageFilePath != null) {
-                        imageUploadViewModel.uploadToCloudinary(imageFilePath, context)
-                    }
+//                            if (imageFilePath != null) {
+//                                imageUploadViewModel.uploadToCloudinary(imageFilePath, context)
+//                            }
                           },
                 modifier = Modifier.fillMaxWidth()
             ) {

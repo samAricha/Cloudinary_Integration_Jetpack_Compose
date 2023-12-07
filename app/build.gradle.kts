@@ -59,6 +59,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("com.google.android.gms:play-services-cast-framework:21.4.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -69,7 +70,6 @@ dependencies {
 
     // All:
     implementation("com.cloudinary:cloudinary-android:2.3.1")
-
     // Download + Preprocess:
     implementation("com.cloudinary:cloudinary-android-download:2.3.1")
     implementation("com.cloudinary:cloudinary-android-preprocess:2.3.1")
@@ -82,6 +82,12 @@ dependencies {
 
     //view-model
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+
+
+    //For rememberLauncherForActivityResult()
+    implementation("androidx.activity:activity-compose:1.8.1")
+    //For PickVisualMedia contract
+    implementation("androidx.activity:activity-ktx:1.8.1")
 
 
 }

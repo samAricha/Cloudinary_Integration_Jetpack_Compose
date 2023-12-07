@@ -9,7 +9,7 @@ import com.cloudinary.android.callback.UploadCallback
 
 class ImageUploadViewModel : ViewModel() {
 
-    fun uploadToCloudinary(filepath: String?, applicationContext: Context) {
+    fun uploadToCloudinary(filepath: String, applicationContext: Context) {
         MediaManager.get()
             .upload(filepath)
             .unsigned("kks8dyht")
@@ -35,6 +35,4 @@ class ImageUploadViewModel : ViewModel() {
 
         }).dispatch()
     }
-
-
 }
