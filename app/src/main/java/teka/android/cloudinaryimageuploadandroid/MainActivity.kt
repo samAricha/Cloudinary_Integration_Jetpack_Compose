@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import teka.android.cloudinaryimageuploadandroid.features.image_upload_feature.presentation.ImageUploadScreen
 import teka.android.cloudinaryimageuploadandroid.ui.theme.CloudinaryImageUploadAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    ImageUploadScreen()
                 }
             }
         }

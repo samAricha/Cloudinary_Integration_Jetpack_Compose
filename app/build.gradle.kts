@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "teka.android.cloudinaryimageuploadandroid"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "teka.android.cloudinaryimageuploadandroid"
@@ -66,4 +66,18 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    // All:
+    implementation("com.cloudinary:cloudinary-android:2.3.1")
+
+    // Download + Preprocess:
+    implementation("com.cloudinary:cloudinary-android-download:2.3.1")
+    implementation("com.cloudinary:cloudinary-android-preprocess:2.3.1")
+
+    // Extended Icons
+    implementation("androidx.compose.material:material-icons-extended:1.5.4")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.3.0")
+
 }
